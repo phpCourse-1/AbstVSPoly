@@ -11,7 +11,6 @@ These two are among the most important characteristics of Object Oriented paradi
 
 ## ✧ <span id='abstraction'>Abstraction</span>
 
-<hr>
 Data Abstraction is the most important features of any OOPS programming language. It shows only useful information, remaining are hidden form the end user. Abstraction is the any representation of data in which the implementation details are hidden (abstracted).
 
 ```php
@@ -58,7 +57,6 @@ echo $dog->makeSound(); // The Sound Bark By Dog
 
 ## ✧ <span id='polymorphism'>Polymorphism</span>
 
-<hr>
 Polymorphism means reuse with different types. So with my set example you could create sets of Social Security numbers, sets of full names, or sets of fruitbats, all using the same code.
 
 ```php
