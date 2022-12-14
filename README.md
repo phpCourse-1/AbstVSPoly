@@ -1,9 +1,17 @@
-# Abstraction and Polymorphism
+<div align="center"><h2> Abstraction and Polymorphism <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
+
+</div>
+<hr>
 
 These two are among the most important characteristics of Object Oriented paradigm:
 
-## Abstraction
+- [Abstraction](#abstraction)
+- [Polymorphism](#polymorphism)
+- [Conclusion](#conclusion)
 
+## ✧ <span id='abstraction'>Abstraction</span>
+
+<hr>
 Data Abstraction is the most important features of any OOPS programming language. It shows only useful information, remaining are hidden form the end user. Abstraction is the any representation of data in which the implementation details are hidden (abstracted).
 
 ```php
@@ -48,4 +56,54 @@ echo $dog->describe(); // Dog color is Black
 echo $dog->makeSound(); // The Sound Bark By Dog
 ```
 
-## Polymorphism
+## ✧ <span id='polymorphism'>Polymorphism</span>
+
+<hr>
+Polymorphism means reuse with different types. So with my set example you could create sets of Social Security numbers, sets of full names, or sets of fruitbats, all using the same code.
+
+```php
+    interface Machine {
+      public function calcTask();
+    }
+
+   class Circle implements Machine {
+      private $radius;
+      public function __construct($radius){
+         $this -> radius = $radius;
+      }
+      public function calcTask(){
+         return $this -> radius * $this -> radius * pi();
+      }
+   }
+
+   class Rectangle implements Machine {
+      private $width;
+      private $height;
+
+      public function __construct($width, $height){
+         $this -> width = $width;
+         $this -> height = $height;
+      }
+
+      public function calcTask(){
+         return $this -> width * $this -> height;
+      }
+   }
+
+   $mycirc = new Circle(3);
+   $myrect = new Rectangle(3,4);
+   echo $mycirc->calcTask(); // 28.274
+   echo $myrect->calcTask(); // 12
+```
+
+The interface with the name of `"Machine"` commits all the classes that implement it to define an abstract method with the name of `callTask()`.
+
+In accordance, the `Circle` class implements the interface by defining the `callTask()` method with the respective body inside it.
+
+The `Rectangle` class also implements the Machine interface but defines the method `callTask()` with a <b>different body</b> that differs from the circle class `callTask()` method. The polymorphism guideline says that, for this situation, all the methods that calculate the task would have the equivalent name.
+
+<hr>
+
+## ✧ <span id='conclusion'>In Conclusion and in the short words:</span>
+
+<s>Abstraction</s> is conceptual, <s>Polymorphism</s> is behavioral;
