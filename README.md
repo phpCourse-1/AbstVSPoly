@@ -106,4 +106,4 @@ The `Rectangle` class also implements the Machine interface but defines the meth
 
 ## ✧ <span id='conclusion'>In Conclusion and in the short words:</span>
 
-<s>Abstraction</s> is conceptual, <s>Polymorphism</s> is behavioral;
+<b>Abstraction</b> is conceptual, <b>Polymorphism</b> is behavioral
